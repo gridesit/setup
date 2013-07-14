@@ -1,0 +1,37 @@
+New instance
+
+1. Install Git
+	$ sudo apt-get install -y git-core
+	$ which git
+
+2. Clone DevOps
+	$ git clone https://github.com/gridesit/setup.git
+	$ cd setup
+	$ ./setup.sh
+	 
+3. Install Heroku
+	$ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+	$ which heroku
+	
+4. Login and set up your SSH keys (This need to be set up for each machine)
+	$ heroku login
+	$ ssh-keygen -t rsa
+	$ heroku keys:add
+
+5. Basic Server-Side JS (SSJS) (OPTIONAL)
+	# Install node and npm
+		$ sudo apt-get update
+	# Install a special package
+		$ sudo apt-get install -y python-software-properties python g++ make        
+	# Add a new repository for apt-get to search
+		$ sudo add-apt-repository ppa:chris-lea/node.js
+	# Update apt-get’s knowledge of which packages are where
+		$ sudo apt-get update
+	# Now install nodejs and npm
+		$ sudo apt-get install -y nodejs
+
+3. Clone a sample repo and push to heroku (OPTIONAL)
+	$ git clone https://github.com/heroku/node-js-sample.git
+	$ cd node-js-sample
+	$ heroku create
+	$ git push heroku master
